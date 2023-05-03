@@ -1,6 +1,6 @@
 <div *ngIf="feature !== undefined">
     <span>
-        <input type="checkbox" name="feautes-listitem-select" [(ngModel)]="feature.isSelected" />
+        <p-checkbox name="feautes-listitem-select"  [(ngModel)]="feature.isSelected" [binary]="true"></p-checkbox>
     </span>
     <span>
         <b>{{feature.model.name}}</b>        
@@ -9,7 +9,10 @@
         <i>{{feature.model.key}}</i>        
     </span>    
     <span>
-        <input type="checkbox" name="features-listitem-isenabled" [(ngModel)]="feature.model.isEnabled" />
+    <p-checkbox name="features-listitem-isenabled"  [(ngModel)]="feature.model.isEnabled" [binary]="true"></p-checkbox>
+    </span>
+    <span>
+        <p-button icon="pi pi-trash" (click)="onRemove(feature.model)"></p-button>
     </span>
 </div>
 <div *ngIf="feature === undefined">

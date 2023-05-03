@@ -8,6 +8,7 @@ import { FeatureListItem, IFeature } from '../models/feature.model';
 })
 export class FeaturesListComponent {
   isAllChecked: boolean = false;
+  selectedFeatures: FeatureListItem[] = [];
 
   features: FeatureListItem[] = [
     new FeatureListItem({
@@ -15,16 +16,20 @@ export class FeaturesListComponent {
       name: 'Auto switcher',
       isEnabled: true,
       description: '',
-      tags: []
+      tags: [],
+      isRemove: false
     } as IFeature),
     new FeatureListItem({
       key: 'manual-switcher',
       name: 'Manual switcher',
       isEnabled: false,
       description: '',
-      tags: []
+      tags: [],
+      isRemove: false
     } as IFeature),
-  ];
+  ];  
 
-  
+  onEdit(feature: IFeature) {
+    console.log(feature);
+  }
 }

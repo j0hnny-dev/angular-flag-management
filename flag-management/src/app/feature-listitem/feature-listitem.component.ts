@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FeatureListItem } from '../models/feature.model';
+import { FeatureListItem, IFeature } from '../models/feature.model';
 
 @Component({
   selector: 'app-feature-listitem',
@@ -8,4 +8,8 @@ import { FeatureListItem } from '../models/feature.model';
 })
 export class FeatureListitemComponent {
   @Input() feature: FeatureListItem | undefined = undefined;
+
+  onRemove(feautre: IFeature) {
+    feautre.isRemove = true;
+  }
 }

@@ -8,7 +8,8 @@ export interface IFeature {
     name: string;
     description: string;
     isEnabled: boolean;
-    tags: ITag[]
+    tags: ITag[];
+    isRemove: boolean;
 }
 
 export class Feature implements IFeature {
@@ -17,6 +18,7 @@ export class Feature implements IFeature {
     description: string;
     isEnabled: boolean;
     tags: ITag[];
+    isRemove: boolean;
 
     constructor(feature: IFeature) {
         this.key = feature.key;
@@ -24,6 +26,7 @@ export class Feature implements IFeature {
         this.description = feature.description;
         this.isEnabled = feature.isEnabled;
         this.tags = feature.tags;
+        this.isRemove = feature.isRemove;
     }    
 }
 

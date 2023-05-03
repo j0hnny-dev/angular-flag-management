@@ -8,6 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { FeaturesListComponent } from './features-list/features-list.component';
 import { FeatureListitemComponent } from './feature-listitem/feature-listitem.component';
 
+import { ButtonModule } from 'primeng/button';
+import { CheckboxModule } from 'primeng/checkbox';
+import { TableModule } from 'primeng/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,10 @@ import { FeatureListitemComponent } from './feature-listitem/feature-listitem.co
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule,
+    CheckboxModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
