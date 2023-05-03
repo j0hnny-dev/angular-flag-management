@@ -1,0 +1,25 @@
+<div>
+    <h1>New-feature</h1>
+    
+    <div>
+        <div>
+            <label for="key">Feature key (auto-generated)</label>
+            <input id="key" [(ngModel)]="feature.key" placeholder="key" />
+        </div>
+
+        <div>
+            <label for="name">Feature name</label>
+            <input id="name" [(ngModel)]="feature.name" placeholder="name" />
+        </div>
+
+        <div>
+            <label for="isEnabled">Enabled? (default: true)</label>
+            <input type="checkbox" id="isEnabled" [(ngModel)]="feature.isEnabled" />
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <textarea id="description" [(ngModel)]="feature.description"></textarea>
+        </div>
+    </div>
+</div>

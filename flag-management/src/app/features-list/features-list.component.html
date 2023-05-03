@@ -1,0 +1,16 @@
+<div>
+    <h1>Features&nbsp;<span>({{features.length}})</span></h1>
+
+    <div>
+        <div>
+            <span><input type="checkbox" name="check-all-features" [(ngModel)]="isAllChecked" /></span>
+            <span>Name</span>
+            <span>Key</span>
+            <span>Enabled?</span>
+        </div>
+
+        <div *ngFor="let feature of features">
+            <app-feature-listitem [feature]="feature"></app-feature-listitem>
+        </div>
+    </div>    
+</div>
