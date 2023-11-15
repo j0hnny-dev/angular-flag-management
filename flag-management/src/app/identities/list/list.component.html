@@ -1,0 +1,14 @@
+<div class="container mt-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <app-email-list-item *ngFor="let email of emails" [email]="email" (delete)="deleteEmail($event)" />
+      </tbody>
+    </table>
+  </div>
+  

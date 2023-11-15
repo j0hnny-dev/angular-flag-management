@@ -11,13 +11,15 @@ import { FeatureListitemComponent } from './feature-listitem/feature-listitem.co
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TableModule } from 'primeng/table';
+import { IdentitiesComponent } from './identities/identities.component';
+import { SchedulingComponent } from './scheduling/scheduling.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewFeatureComponent,
     FeaturesListComponent,
-    FeatureListitemComponent
+    FeatureListitemComponent    
   ],
   imports: [
     BrowserModule,
