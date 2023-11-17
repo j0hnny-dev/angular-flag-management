@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeaturesListComponent } from './features-list.component';
+import { EditIdentityComponent } from './edit-identity.component';
 
-describe('FeaturesListComponent', () => {
-  let component: FeaturesListComponent;
-  let fixture: ComponentFixture<FeaturesListComponent>;
+describe('EditIdentityComponent', () => {
+  let component: EditIdentityComponent;
+  let fixture: ComponentFixture<EditIdentityComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeaturesListComponent ]
+      declarations: [ EditIdentityComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FeaturesListComponent);
+    fixture = TestBed.createComponent(EditIdentityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

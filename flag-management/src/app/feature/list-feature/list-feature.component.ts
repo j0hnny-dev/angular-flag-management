@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FeatureListItem, IFeature } from '../models/feature.model';
 
 @Component({
-  selector: 'app-features-list',
-  templateUrl: './features-list.component.html',
-  styleUrls: ['./features-list.component.scss']
+  selector: 'list-feature',
+  templateUrl: './list-feature.component.html',
+  styleUrls: ['./list-feature.component.scss']
 })
-export class FeaturesListComponent {
+export class ListFeatureComponent {
   isAllChecked: boolean = false;
   selectedFeatures: FeatureListItem[] = [];
 

@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListComponent } from './list/list.component';
-import { ListItemComponent } from './list-item/list-item.component';
-import { EditComponent } from './edit/edit.component';
+import { ListTimingsComponent } from './list-timings/list-timings.component';
+import { ListItemTimingComponent } from './list-item/list-item-timing.component';
+import { EditTimingComponent } from './edit-timing/edit-timing.component';
+import { SchedulingRoutingModule } from './scheduling-routing.module';
 
 @NgModule({
   declarations: [
-    ListComponent,
-    ListItemComponent,
-    EditComponent
+    ListTimingsComponent,
+    ListItemTimingComponent,
+    EditTimingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SchedulingRoutingModule
   ]
 })
 export class SchedulingModule { }

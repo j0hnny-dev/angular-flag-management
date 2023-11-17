@@ -1,0 +1,33 @@
+<div>
+    <h1>Features&nbsp;<span>({{features.length}})</span></h1>
+    <p-table [value]="features" [(selection)]="selectedFeatures" dataKey="model.key"
+        [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 4rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th>Name</th>
+                <th>Key</th>
+                <th>Enabled</th>
+                <th>Edit</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-feature>
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="feature"></p-tableCheckbox>
+                </td>
+                <td>{{feature.model.name}}</td>
+                <td>{{feature.model.key}}</td>
+                <td>
+                    <p-checkbox name="features-listitem-isenabled" [disabled]="true" [ngModel]="feature.model.isEnabled"
+                        [binary]="true"></p-checkbox>
+                </td>
+                <td>
+                    <p-button icon="pi pi-pencil" (onClick)="onEdit(feature.model)"></p-button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NewFeatureComponent } from './new-feature.component';
+import { EditTimingComponent } from './edit-timing.component';
 
-describe('NewFeatureComponent', () => {
-  let component: NewFeatureComponent;
-  let fixture: ComponentFixture<NewFeatureComponent>;
+describe('EditTimingComponent', () => {
+  let component: EditTimingComponent;
+  let fixture: ComponentFixture<EditTimingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewFeatureComponent ]
+      declarations: [ EditTimingComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NewFeatureComponent);
+    fixture = TestBed.createComponent(EditTimingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

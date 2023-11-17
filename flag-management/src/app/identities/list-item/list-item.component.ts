@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-list-item',
-  templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.scss']
+  selector: 'list-item-identity',
+  templateUrl: './list-item-identity.component.html',
+  styleUrls: ['./list-item-identity.component.scss']
 })
-export class ListItemComponent {
+export class ListItemIdentityComponent {
 
+  @Input() email: string = '';
+  @Output('delete') emitDeleteEmail: EventEmitter<string> = new EventEmitter();
+
+  deleteEmail(email: string) {
+    if (email) {
+      this.emitDeleteEmail.emit(email);
+    }    
+  }
 }
